@@ -12,6 +12,7 @@
     "format:check": "prettier --check 'src/*.{js,ts,json,yaml,yml,md}'",
     "format:write": "prettier --write 'src/*.{js,ts,json,yaml,yml,md}'",
     "lint": "eslint 'src/**/*.{js,ts}'",
+    "postinstall": "yarn prepare",
     "prepare": "husky install",
     "start": "NODE_ENV=production node ./dist/index.js"
   },
