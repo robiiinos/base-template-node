@@ -1,31 +1,25 @@
-# serverless-vercel-api
+# base-template-node
 
-Serverless API Template, hosted with [Vercel](https://vercel.com/).
-
-## Dependencies
-
-- [Vercel CLI](https://vercel.com/download)
-  - Required to emulate local environment (serverless functions).
+Opinionated NodeJS Template for kickstarting work on side projects, made easy.
 
 # Development
 
 ## Build
 
 ```shell
+# Install dependencies
 yarn
-vercel dev
+
+# Start the server
+yarn dev
 ```
 
-Endpoints are based on filename inside the `api/` folder.
+> Note: Hot reload is available when developing in local mode.
+
+Output:
 
 ```shell
-# api/index.ts
-curl -X GET 'localhost:3000/api'
-
-# api/time.ts
-curl -X GET 'localhost:3000/api/time'
-
-# ...
+{"level":"info","message":"Hello World!","timestamp":"2023-01-01T00:00:00.000+00:00"}
 ```
 
 # Production
@@ -37,5 +31,9 @@ Deployments to production should be triggered by a webhook when a commit, or a p
 If you need to force a deployment, use the following command:
 
 ```shell
-vercel --prod
+# Build the server
+yarn build
+
+# Start the server
+yarn start
 ```
