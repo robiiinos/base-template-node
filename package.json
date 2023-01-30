@@ -11,7 +11,7 @@
     "dev": "NODE_ENV=development ts-node-dev --no-notify --respawn --transpile-only ./src/index",
     "format:check": "prettier --check '**/*.{js,ts,json,yaml,yml,md}'",
     "format:write": "prettier --write '**/*.{js,ts,json,yaml,yml,md}'",
-    "lint": "eslint '**/*.{js,ts}'",
+    "lint": "eslint './src/**/*.{js,ts}'",
     "postinstall": "yarn prepare",
     "prepare": "husky install",
     "start": "NODE_ENV=production node ./dist/index.js"
