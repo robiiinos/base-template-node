@@ -2,7 +2,8 @@
   "extends": "@tsconfig/node18-strictest/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist" /* Redirect output structure to the directory. */,
-    "resolveJsonModule": true /* Allows importing modules with a ‘.json’ extension. */
+    "resolveJsonModule": true /* Allows importing modules with a ‘.json’ extension. */,
+    "importsNotUsedAsValues": "remove" /** Deprecated in TypeScript 5 */
   },
   "include": ["src"],
   "exclude": ["node_modules"]
